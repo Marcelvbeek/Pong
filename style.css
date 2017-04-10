@@ -1,0 +1,43 @@
+/** unset body */
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/** set up canvas */
+
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+@keyframes playerAnimation {
+    0% {
+        width: 45px;
+        height: 45px;
+        opacity: 0.9;
+    }
+    50% {
+        width: 65px;
+        height: 65px;
+        opacity: 0.6;
+    }
+    100% {
+        width: 45px;
+        height: 45px;
+        opacity: 0.9;
+    }
+}
+
+.player {
+    border-radius: 50%;
+    background-color: #fff;
+    /* animation */
+    animation-name: playerAnimation;
+    animation-duration: 7s;
+    animation-fill-mode: ease;
+    animation-iteration-count: infinite;
+}
