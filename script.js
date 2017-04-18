@@ -11,7 +11,11 @@ $(function() {
      */
     let canvasHammer = new Hammer.Manager(canvas);
     let pan = new Hammer.Pan();
+    let press = new Hammer.Press();
+    let tap = new Hammer.Tap();
     canvasHammer.add(pan);
+    canvasHammer.add(press);
+    canvasHammer.add(tap);
 
     class game {
         /**
@@ -97,6 +101,20 @@ $(function() {
                     }, 10);
 
                 }
+            });
+
+            // Bij het indrukken ook een simpele animatie, tonen van een afbeelding naar keuze 
+            canvasHammer.on('tap', function(ev) { 
+                var element = $(document.createElement('div'));
+                $(element).addClass('pong');
+                $(self.canvas).append($(element));
+
+                $(element).css({
+                    'position': 'absolute',
+                    'top': ev.center.y,
+                    'left': ev.center.x
+                });
+
             });
 
         }
