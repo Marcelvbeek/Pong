@@ -101,4 +101,56 @@ body {
 
 
 
+@keyframes rippleAnimation {
+    0% {
+        transition:all 0.9s ease;
+        opacity: .6;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        width: 75px;
+        height: 75px;
+        opacity: 0.9;
+    }
+    40% {
+        background-color: white;
+    }
+    50% {
+        width: 85px;
+        height: 85px;
+        opacity: 0.6;
+        background-color: red;
+        transform: scale(1);
+    }
+    60% {
+        background-color: white;
+    }
+    100% {
+        transition:all 0.4s ease;
+        opacity: 0;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        width: 75px;
+        height: 75px;
+    }
+}
+
+.ripple {
+    border-radius: 50%;
+    background-color: #fff;
+    /* animation */
+    animation-name: rippleAnimation;
+    animation: rippleAnimation 1s ease-out;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    overflow: hidden;
+}
+
+.ripple:after {
+    background: #3f51b5;
+    border-radius: 100%;
+    opacity: .6;
+    transform: scale(0);
+}
 

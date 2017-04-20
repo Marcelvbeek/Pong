@@ -106,8 +106,9 @@ $(function() {
 
             // Bij het indrukken ook een simpele animatie, tonen van een afbeelding naar keuze 
             canvasHammer.on('tap', function(ev) { 
+
                 var element = $(document.createElement('div'));
-                $(element).addClass('pong');
+                $(element).addClass('ripple');
                 $(self.canvas).append($(element));
 
                 $(element).css({
@@ -115,7 +116,7 @@ $(function() {
                     'top': ev.center.y,
                     'left': ev.center.x
                 });
-
+            
             });
 
         }
