@@ -87,6 +87,7 @@ $(function() {
                     var y = Math.sin(angle * Math.PI / -180) * dist;
 
                     var element = $(document.createElement('div'));
+
                     $(element).addClass('player');
                     $(self.canvas).append($(element));
 

@@ -63,13 +63,13 @@ body {
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
         transform: scale(1.2);
-        width: 45px;
-        height: 45px;
+        width: 75px;
+        height: 75px;
         opacity: 0.9;
     }
     50% {
-        width: 55px;
-        height: 55px;
+        width: 80px;
+        height: 80px;
         opacity: 0.6;
     }
     100% {
@@ -79,18 +79,16 @@ body {
         -ms-transform: scale(.3);
         transform: scale(.3);
         width: 45px;
-        display: none;
         height: 45px;
     }
 }
 
-
 .pong {   
     /* animation */
     animation-name: pongAnimation;
-    animation-duration: 3s;
     animation-fill-mode: ease;
-    animation-duration: 3s;
+    animation-duration: 4s;
+    -webkit-animation:pongAnimation 1s forwards;
     width: 100px;
     height: 50px;  
     background-image: url('../img/pong_white.png');
